@@ -10,7 +10,7 @@
       ></v-text-field>
       <v-data-table
           :headers="headers"
-          :items="user"
+          :items="usersItem"
           :search="search"
       >
         <template v-slot:item.actions="{ item }">
@@ -55,6 +55,8 @@
  export default {
    data() {
      return {
+       search: "",
+       usersItem: [],
        dialog: false,
        dialogDelete: false,
        headers: [

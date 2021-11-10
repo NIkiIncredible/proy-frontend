@@ -9,11 +9,12 @@
           color="grey lighten-4"
           class="pa-4"
       >
-        <v-avatar
-            class="mb-4"
-            color="grey darken-1"
-            size="64"
-        ></v-avatar>
+<!--        <v-avatar-->
+<!--            class="mb-4"-->
+<!--            color="grey darken-1"-->
+<!--            size="64"-->
+<!--        ></v-avatar>-->
+        <avatar size="70" variant="beam" name="Niklas Ehlen" :square="false" :colors="colors" />
 
         <div>Niklas Ehlen <span class="grey--text">- Mitarbeiter</span></div>
         <div>30 Tage übrig</div>
@@ -58,8 +59,11 @@
   </v-app>
 </template>
 <script>
+import Avatar from 'vue2-boring-avatars'
+
 export default {
   data: () => ({
+    colors: ['#f4f1de','#e07a5f','#3d405b','#81b29a','#f2cc8f'],
     cards: ['Today', 'Yesterday'],
     drawer: null,
     links: [
@@ -69,6 +73,7 @@ export default {
       ['mdi-backspace-outline', 'Abmelden', '/intern/logout']
     ],
   }),
+  components: {Avatar}
 }
 </script>
 
